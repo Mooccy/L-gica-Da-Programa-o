@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Informações</title>
+        
+        <style>
+
+            body {
+                background-color: palegreen;
+                background-image: url(https://th.bing.com/th/id/OIP.kkBAaE5fUfO8NRaNdS1wrAHaEK?rs=1&pid=ImgDetMain);
+                background-size: cover;
+                background-repeat: no-repeat;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                color: whitesmoke;
+            }
+
+            .bo {
+                background-color: green;
+                font-size: 50px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                position: absolute;
+                left: 5%;
+                bottom: 17%;
+                border-radius: 15px;
+            }
+            
+            .bn {
+                background-color: red;
+                font-size: 50px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                position: absolute;
+                left: 17%;
+                bottom: 17%;
+                border-radius: 15px;
+            }
+
+            button:hover {
+                opacity: 70%;
+                cursor: pointer;
+            }
+
+            .lb {
+                font-weight: bold;
+                margin-left: 30px;
+            }
+
+            .ip {
+                margin-bottom: 30px;
+                margin-left: 30px;
+                font-size: 15px;
+                width: 470px;
+            }
+
+            .ipCPF {
+                width: 170px;
+                margin-bottom: 30px;
+                margin-left: 30px;
+                font-size: 15px;
+            }
+
+            .bx {
+                background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p2/1576504-abstrato-ondulado-verde-fundo-gr%C3%A1tis-vetor.jpg);
+                background-position: center;
+                background-size: cover;
+                align-self: center;
+                position: absolute;
+                top: 3%;
+                border-radius: 15px;
+            }
+
+            .btxt {
+                margin-left: 30px;
+                margin-right: 30px;
+            }
+
+            .ipbx {
+                background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p2/1576504-abstrato-ondulado-verde-fundo-gr%C3%A1tis-vetor.jpg);
+                background-size: cover;
+                background-position: center;
+                align-self: center;
+                position: relative;
+                top: 156px;
+                border-radius: 15px;
+                padding-top: 30px;
+                padding-bottom: 160px;
+                margin-right: 800px;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <div class="bx">
+            <h1 class="btxt">Por favor valide suas informações</h1>
+        </div>
+
+        <div class="ipbx">
+            <label class="lb" for="meuInput">Nome:</label>
+            <br>
+            <input class="ip" type="text" id="meuInput" placeholder="Digite seu nome">
+            <br>
+
+            <label class="lb" for="meuInput">CPF:</label>
+            <br>
+            <input class="ipCPF" type="number" maxlength="11" id="meuInput" placeholder="Digite seu CPF">
+            <br>
+
+            <label class="lb" for="meuInput">E-mail:</label>
+            <br>
+            <input class="ip" type="email" id="meuInput" placeholder="Digite seu E-mail">
+            <br>
+        </div>
+        
+            <button onclick="location.href='http://eaglercraft.net'" class="bo">OK</button>
+            <button class="bn">Cancelar</button>
+
+    </body>

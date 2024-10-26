@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Botões</title>
+
+	<style>
+		body {
+			background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/6180697-vista-superior-do-campo-de-futebol-ou-campo-de-futebol-verde-vetor.jpg);
+			background-size: 1366px 786px;
+			background-repeat: no-repeat;
+			text-align: center;
+		}
+		.ttl {
+			font-size: 100px;
+			color: white;
+			margin-bottom: -60px;
+		}
+		.butS {
+			background-color: green;
+			font-size: 50px;
+			border-radius: 15px;
+			margin-right: 50px;
+		}
+		.butN {
+			background-color: red;
+			font-size: 50px;
+			border-radius: 15px;
+			margin-left: 50px;
+		}
+		.box {
+			background-color: white;
+			display: inline-block;
+			border-radius: 15px;
+			padding: 60px;
+			margin-top: 175px;
+		}
+		.joia {
+			position: absolute;
+			left: 7%;
+			top: 33%;
+			width: 200px;
+			height: 300px;
+		}
+		.ruim {
+			position: absolute;
+			right: 9%;
+			top: 50%;
+			width: 150px;
+			height: 180px;
+		}
+	</style>
+</head>
+<body>
+	<h1 class="ttl">Você gosta de futebol?</h1>
+
+	<div class="box">
+		<button onclick="sim()" class="butS">SIM</button>
+		<button onclick="nao()" class="butN">NÃO</button>
+	</div>
+
+	<img class="joia" id="positivo" src="https://www.rawshorts.com/freeicons/wp-content/uploads/2017/01/green_webpict31_1484337153-1.png" style="display: none;">
+	<img class="ruim" id="negativo" src="https://wallpapers.com/images/hd/red-thumbs-down-icon-48zn6kub0bvq9jvv.jpg" style="display: none;">
+
+	<script>
+		function sim() {
+			console.log("Parabéns você é um verdadeiro brasileiro!");
+			alert("Parabéns você é um verdadeiro brasileiro!");
+			document.getElementById("positivo").style.display = "block"
+			setTimeout(function() {
+   			window.location.href = "https://www.google.com.br/maps/@-13.4340019,-45.5664466,4.5z?entry=ttu&g_ep=EgoyMDI0MTAyMi4wIKXMDSoASAFQAw%3D%3D";
+			}, 3000);
+		}
+		function nao() {
+			console.log("Sua cidadania foi revogada.");
+			alert("Sua cidadania foi revogada.");
+			document.getElementById("negativo").style.display = "block"
+			setTimeout(function() {
+   				window.location.href = "https://www.google.com.br/maps/@16.1377655,71.3040685,3z?entry=ttu&g_ep=EgoyMDI0MTAyMi4wIKXMDSoASAFQAw%3D%3D";
+				}, 3000);
+		}
+	</script>
+</body>
+</html>
