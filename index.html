@@ -3,83 +3,87 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Botões</title>
+	<title>Número Secreto</title>
 
 	<style>
 		body {
-			background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/6180697-vista-superior-do-campo-de-futebol-ou-campo-de-futebol-verde-vetor.jpg);
-			background-size: 1366px 786px;
-			background-repeat: no-repeat;
 			text-align: center;
+			font-size: 50px;
 		}
-		.ttl {
-			font-size: 100px;
+		.butC {
+			font-size: 70px;
+			background-color: black;
 			color: white;
-			margin-bottom: -60px;
+			border-radius: 5px;
+			padding: 10px;
 		}
-		.butS {
-			background-color: green;
+		.iptN {
 			font-size: 50px;
-			border-radius: 15px;
-			margin-right: 50px;
 		}
-		.butN {
-			background-color: red;
+		.butA {
 			font-size: 50px;
-			border-radius: 15px;
-			margin-left: 50px;
+			background-color: black;
+			color: white;
+			border-radius: 5px;
+			padding: 10px;
+			margin-top: 30px;
 		}
-		.box {
-			background-color: white;
-			display: inline-block;
-			border-radius: 15px;
-			padding: 60px;
-			margin-top: 175px;
-		}
-		.joia {
+		.boxP {
+			background-color: black;
+			font-size: 50px;
+			border-radius: 50px;
+			padding: 10px;
+			color: white;
 			position: absolute;
-			left: 7%;
-			top: 33%;
-			width: 200px;
-			height: 300px;
+			top: 5%;
+			left: 13%;
 		}
-		.ruim {
-			position: absolute;
-			right: 9%;
-			top: 50%;
-			width: 150px;
-			height: 180px;
-		}
+
 	</style>
+
 </head>
+
 <body>
-	<h1 class="ttl">Você gosta de futebol?</h1>
 
-	<div class="box">
-		<button onclick="sim()" class="butS">SIM</button>
-		<button onclick="nao()" class="butN">NÃO</button>
-	</div>
+<h1 id="txt1">Bem vindo ao jogo do número screto.</h1>
+<button id="but1" onclick="but1Act()" class="butC">Começar?</button>
+<br>
+<label id="lbl1" hidden for="ipt1">Digite um número entre 1 a 100: </label>
+<input class="iptN" type="number" id="ipt1" hidden></input>
+<br>
+<button class="butA" id="but2" onclick="chute()" hidden>Adivinhar</button>
 
-	<img class="joia" id="positivo" src="https://www.rawshorts.com/freeicons/wp-content/uploads/2017/01/green_webpict31_1484337153-1.png" style="display: none;">
-	<img class="ruim" id="negativo" src="https://wallpapers.com/images/hd/red-thumbs-down-icon-48zn6kub0bvq9jvv.jpg" style="display: none;">
+<div class="boxP" id="boxPar" hidden>
+	<h1>Parabéns você ganhou!</h1>
+</div>
 
-	<script>
-		function sim() {
-			console.log("Parabéns você é um verdadeiro brasileiro!");
-			alert("Parabéns você é um verdadeiro brasileiro!");
-			document.getElementById("positivo").style.display = "block"
-			setTimeout(function() {
-   			window.location.href = "https://www.google.com.br/maps/@-13.4340019,-45.5664466,4.5z?entry=ttu&g_ep=EgoyMDI0MTAyMi4wIKXMDSoASAFQAw%3D%3D";
-			}, 3000);
+<script>
+	function but1Act() {
+		alert("Sumário: A função Math.random() retorna um número pseudo-aleatório no intervalo [0, 1], ou seja, de 0 (inclusivo) até, mas não incluindo, 1 (exclusivo), que depois você pode dimensionar para um intervalo desejado. A implementação seleciona uma semente para o algoritmo de geração de números aleatórios; esta semente não pode ser escolhida ou reatribuída.")
+		document.getElementById("txt1").textContent = "O número secreto foi gerado. Boa sorte!"
+		document.getElementById("but1").disabled = false;
+		document.getElementById("but1").style.display = "none"
+		document.getElementById("ipt1").hidden = false;
+		document.getElementById("lbl1").hidden = false;
+		document.getElementById("but2").hidden = false;
+	}
+	function chute() {
+		let palpite = parseInt(document.getElementById("ipt1").value);
+		
+		if (palpite === rng) {
+			document.getElementById("boxPar").hidden = false;
+		} else {
+			if (palpite < rng) {
+				alert("Número muito pequeno")
+			} else {
+				alert("Número muito grande")
+			}
 		}
-		function nao() {
-			console.log("Sua cidadania foi revogada.");
-			alert("Sua cidadania foi revogada.");
-			document.getElementById("negativo").style.display = "block"
-			setTimeout(function() {
-   				window.location.href = "https://www.google.com.br/maps/@16.1377655,71.3040685,3z?entry=ttu&g_ep=EgoyMDI0MTAyMi4wIKXMDSoASAFQAw%3D%3D";
-				}, 3000);
-		}
-	</script>
+	}
+	let rng = Math.floor(Math.random() * 10) + 1;
+	console.log(rng);
+
+</script>
 </body>
+
 </html>
